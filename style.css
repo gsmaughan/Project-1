@@ -1,0 +1,32 @@
+table{
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid black;
+ }
+ .col{
+     height: 40vh;
+ }
+ th{
+    text-align: center;
+    color: red;
+    animation-name: bounce;
+ }
+ #header{
+     text-align: center;
+     font-weight: bold;
+     font-size: 25px;
+     text-shadow: 2px grey;
+     animation: shake;
+ }
+ #move{
+    display:block; 
+    margin:auto;
+    
+ }
+ #move:hover{
+    background-color: blue;
+ }
+ #buffer{
+     margin: 20px;
+ }
