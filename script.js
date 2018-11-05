@@ -25,48 +25,48 @@ window.onload = function loaded(){
                             home       : 'Alzarius'},
                         {   first_name : 'Susan',
                             last_name  : 'Foreman',
-                            home       : 'Gallifrey'} ];
+                            home       : 'Gallifrey'} ]; // the array of objects for the table
 
-    var div = ["one", "two", "three", "four"];
-    var j = 0;
+    var div = ["one", "two", "three", "four"];  //array of ids for the 4 divs 
+    var j = 0;  // variable to iterate through the div array
 
     $("#move").on("click", function(){
        
 
-        $('#' + div[j]).html(j+1 + ' of 4');
+        $('#' + div[j]).html(j+1 + ' of 4'); //  when button is clicked, replace html with div number
 
-        j++;
+        j++;  // iterate j
         if(j == 4){
             j = 0;
-        }
+        } // reset j when table is in the fourth div
         
-        show();
+        show();  // call the show function after the div is replaced and j is iterated
     });
     
 
-    show ();
+    show ();  // default to show table on first div
     function show(){
         
-        var objLength = table_data.length;
-        var myvar = '<table>'+
+        
+        var myTable = '<table>'+
                     '<tr>'+
                     '<th>First Name</th>'+
                     '<th>Last Name</th>'+
                     '<th>Home</th>'+
-                    '</tr>';
+                    '</tr>';  // create a variable for the jquery table expression & add all of the headers
 
-        for(var i = 0; i < objLength; i++){
-            myvar += '<tr>'+
+        for(var i = 0; i < table_data.length; i++){
+            myTable += '<tr>'+
             '<td>'+table_data[i].first_name+'</td>'+
             '<td>'+table_data[i].last_name+'</tD>'+
             '<td>'+table_data[i].home+'</th>'+
             '</tr>'     
-        }
+        } // add table data to the myTable variable in the for loop
 
-        myvar += '</table>';
+        myTable += '</table>';  // make sure to close the table
 
 
-        document.getElementById(div[j]).innerHTML = myvar;
+        document.getElementById(div[j]).innerHTML = myTable; // put the table in the the proper div
          
     }
 
