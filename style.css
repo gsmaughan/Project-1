@@ -1,3 +1,7 @@
+body{
+    background-image: linear-gradient(yellow, white);
+}
+
 table{
     width: 100%;
 }
@@ -9,8 +13,8 @@ table, th, td {
  }
  th{
     text-align: center;
-    color: red;
-    animation-name: bounce;
+    color: blue;
+   
  }
  #header{
      text-align: center;
@@ -23,7 +27,7 @@ table, th, td {
  #move{
     display:block; 
     margin:auto;
-    animation: wiggle 2s linear infinite;
+    animation: shake 2s linear infinite;
     
  }
  #move:hover{
@@ -32,24 +36,24 @@ table, th, td {
  #buffer{
      margin: 20px;
  }
- @keyframes wiggle {
+ @keyframes shake {
     0%, 7% {
       transform: rotateZ(0);
     }
     15% {
-      transform: rotateZ(-15deg);
+      transform: rotateZ(-5deg);
     }
     20% {
-      transform: rotateZ(10deg);
+      transform: rotateZ(5deg);
     }
     25% {
-      transform: rotateZ(-10deg);
+      transform: rotateZ(-5deg);
     }
     30% {
-      transform: rotateZ(6deg);
+      transform: rotateZ(3deg);
     }
     35% {
-      transform: rotateZ(-4deg);
+      transform: rotateZ(-2deg);
     }
     40%, 100% {
       transform: rotateZ(0);
